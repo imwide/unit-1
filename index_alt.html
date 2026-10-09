@@ -606,203 +606,6 @@
   display: none !important;
 }
   </style>
- <style id="flz-modern">
-/* ===== flowzz modernisiert – nur 5 Bereiche + 2 technische Fixes ===== */
-:root{
-  --flz-brand:#115149; --flz-brand-2:#19796d; --flz-ink:#28374d; --flz-muted:#5b6b80;
-  --flz-line:#e4e7ec; --flz-mint:#f7fdfc; --flz-mint-2:#e3f3ef; --flz-radius:16px;
-  --flz-shadow:0 1px 2px rgba(16,24,40,.06),0 6px 20px rgba(16,24,40,.06);
-}
-html{scroll-behavior:smooth}
-:focus-visible{outline:3px solid var(--flz-brand-2);outline-offset:2px}
-
-/* --- Technische Fixes (keine Neugestaltung) --- */
-.MuiDrawer-root,.mui-m43pro,.section-revive-ad{display:none!important}
-body{overflow-x:hidden}
-
-/* ===== 1. Header ===== */
-.flz-header{position:sticky;top:0;z-index:1100;background:rgba(255,255,255,.94);backdrop-filter:saturate(180%) blur(12px);-webkit-backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--flz-line)}
-.flz-header__inner{max-width:1310px;margin:0 auto;padding:0 20px;height:68px;display:flex;align-items:center;gap:28px}
-.flz-logo{display:flex;flex:none}
-.flz-logo img{display:block;height:28px;width:auto}
-.flz-nav{display:flex;align-items:center;gap:4px;flex:1;min-width:0}
-.flz-nav a,.flz-more>summary{display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:999px;color:var(--flz-ink);font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap;cursor:pointer;list-style:none;transition:background .15s,color .15s}
-.flz-nav a:hover,.flz-more>summary:hover,.flz-more[open]>summary{background:var(--flz-mint-2);color:var(--flz-brand)}
-.flz-more{position:relative}
-.flz-more>summary::-webkit-details-marker{display:none}
-.flz-more>summary::after{content:"";width:6px;height:6px;margin-left:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.flz-more__panel{position:absolute;top:calc(100% + 8px);left:0;min-width:180px;padding:8px;background:#fff;border:1px solid var(--flz-line);border-radius:12px;box-shadow:var(--flz-shadow);display:flex;flex-direction:column}
-.flz-more__panel a{border-radius:8px}
-.flz-search{position:relative;flex:none;width:260px;transition:width .2s}
-.flz-search:focus-within{width:340px}
-.flz-search svg{position:absolute;left:14px;top:50%;width:18px;height:18px;margin-top:-9px;fill:var(--flz-muted);pointer-events:none}
-.flz-search input{width:100%;height:42px;padding:0 16px 0 42px;border:1px solid var(--flz-line);border-radius:999px;background:#f5f7f9;color:var(--flz-ink);font:inherit;font-size:14px;transition:border-color .15s,background .15s}
-.flz-search input::placeholder{color:var(--flz-muted)}
-.flz-search input:focus{outline:none;background:#fff;border-color:var(--flz-brand-2);box-shadow:0 0 0 3px rgba(25,121,109,.18)}
-.flz-actions{display:flex;align-items:center;gap:4px;flex:none}
-.flz-icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--flz-ink);cursor:pointer;transition:background .15s}
-.flz-icon-btn:hover{background:var(--flz-mint-2)}
-.flz-icon-btn svg{width:24px;height:24px}
-.flz-burger{display:none;position:relative}
-.flz-burger>summary{list-style:none}
-.flz-burger>summary::-webkit-details-marker{display:none}
-.flz-burger__panel{position:absolute;right:0;top:calc(100% + 12px);width:min(320px,calc(100vw - 32px));padding:12px;background:#fff;border:1px solid var(--flz-line);border-radius:16px;box-shadow:var(--flz-shadow);display:flex;flex-direction:column}
-.flz-burger__panel a{display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:10px;color:var(--flz-ink);font-weight:600;text-decoration:none}
-.flz-burger__panel a:hover{background:var(--flz-mint-2)}
-@media (max-width:1100px){.flz-search{width:200px}.flz-search:focus-within{width:240px}.flz-nav a{padding:0 10px}}
-@media (max-width:900px){
-  .flz-header__inner{gap:12px;padding:0 16px;height:60px}
-  .flz-nav{display:none}
-  .flz-burger{display:block}
-  .flz-search{flex:1;width:auto}
-  .flz-search:focus-within{width:auto}
-}
-@media (max-width:480px){.flz-actions .flz-icon-btn--account{display:none}}
-
-/* ===== 2. Top-Produkte ===== */
-#carousel-products-container{padding-top:8px}
-#carousel-products-container .mui-19on7ki{display:flex;align-items:center;justify-content:space-between;gap:16px}
-#carousel-products-container .mui-9jtljk{font-size:28px;line-height:1.2;font-weight:700;color:var(--flz-ink)}
-#carousel-products-container .mui-iy12gz{display:flex;gap:8px}
-#carousel-products-container .mui-iy12gz button{width:44px;height:44px;border:1px solid var(--flz-line);border-radius:50%;background:#fff;transition:background .15s,border-color .15s}
-#carousel-products-container .mui-iy12gz button:hover{background:var(--flz-mint-2);border-color:var(--flz-brand-2)}
-#carousel-products-container .mui-1jz1rh7{display:none}
-#carousel-products-container .mui-iy12gz button div{width:9px!important;height:9px!important;background:none!important;border:solid var(--flz-brand);border-width:0 2px 2px 0}
-#carousel-products-container .mui-iy12gz button[aria-label^="Nächstes"] div{transform:rotate(-45deg)!important;margin-right:3px}
-#carousel-products-container .mui-iy12gz button[aria-label^="Vorheriges"] div{transform:rotate(135deg)!important;margin-left:3px}
-#carousel-products-container .mui-iy12gz button[disabled]{opacity:.35}
-#categories-carousel-wrapper{overflow-x:auto!important;scroll-snap-type:x mandatory;scroll-padding-left:2px;scrollbar-width:thin;scrollbar-color:#c5ccd6 transparent;padding:4px 2px 18px!important;display:block!important}
-#categories-carousel-wrapper .carousel-track{transform:none!important;transition:none!important;cursor:auto!important;touch-action:auto!important}
-#categories-carousel-wrapper .carousel-content + .carousel-content{display:none!important}
-#categories-carousel-wrapper .carousel-product-item{scroll-snap-align:start;border-radius:var(--flz-radius)!important;border-color:var(--flz-line)!important;box-shadow:var(--flz-shadow);transition:transform .2s,box-shadow .2s!important}
-#categories-carousel-wrapper .carousel-product-item:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(16,24,40,.08),0 14px 28px rgba(16,24,40,.12)}
-#categories-carousel-wrapper .MuiCardMedia-root{border-radius:0}
-
-/* ===== 3. Schnellzugriff + Kategorie-Teaser ===== */
-.flz-quick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 20px}
-.flz-quick__label{font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--flz-muted);margin-right:6px}
-.flz-quick a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--flz-mint-2);border-radius:999px;background:#fff;color:var(--flz-ink);font-size:14px;font-weight:600;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
-.flz-quick a:hover{background:var(--flz-mint-2);border-color:var(--flz-brand-2);color:var(--flz-brand)}
-.flz-quick a:first-of-type{background:var(--flz-brand);border-color:var(--flz-brand);color:#fff}
-.flz-quick a:first-of-type:hover{background:var(--flz-brand-2)}
-#effect-tabpanel-0 .mui-9evbzd{border-radius:24px;background:var(--flz-mint);border:1px solid var(--flz-mint-2)}
-#effect-tabpanel-0 .markdown a.MuiButton-root{display:flex;width:100%;max-width:320px;justify-content:center;margin:0 0 12px;min-height:46px;border-radius:999px;font-weight:600;color:var(--flz-brand);border:1px solid var(--flz-brand);text-decoration:none;background:transparent}
-#effect-tabpanel-0 .markdown a.MuiButton-root:first-of-type{background:var(--flz-brand);color:#fff}
-#effect-tabpanel-0 .markdown a.MuiButton-root:hover{background:var(--flz-brand-2);color:#fff;border-color:var(--flz-brand-2)}
-#effect-tabpanel-0 .markdown .MuiTypography-body1 + br{display:block;content:"";margin-bottom:6px}
-#effect-tabpanel-0 .swiper{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px}
-#effect-tabpanel-0 .swiper::-webkit-scrollbar{display:none}
-#effect-tabpanel-0 .swiper-wrapper{transform:none!important;width:max-content;gap:16px}
-#effect-tabpanel-0 .swiper-slide{width:240px!important;margin-right:0!important;scroll-snap-align:start;flex:none}
-#effect-tabpanel-0 .mui-rld8uq{border-radius:var(--flz-radius)!important;border:1px solid var(--flz-line)!important;box-shadow:none;flex:1;display:flex;flex-direction:column}
-#effect-tabpanel-0 .swiper-slide-active .mui-rld8uq{border:1px solid var(--flz-line)!important;transform:none;filter:none}
-#effect-tabpanel-0 .mui-1yetngc{padding:16px!important;display:flex;flex-direction:column;flex:1}
-#effect-tabpanel-0 .mui-1yetngc .markdown{margin-top:auto}
-#effect-tabpanel-0 .mui-1x42rty{margin:0 0 10px;font-size:15px;line-height:1.4}
-#effect-tabpanel-0 .mui-1x42rty a{display:flex;justify-content:center;align-items:center;min-height:44px;padding:0 12px;border:1px solid var(--flz-brand);border-radius:999px;color:var(--flz-brand);font-weight:600;font-size:14px;text-decoration:none;text-align:center}
-#effect-tabpanel-0 .mui-1x42rty a:hover{background:var(--flz-brand);color:#fff}
-#effect-tabpanel-0 .mui-1sm2s1z{flex:1;display:flex;flex-direction:column}
-#effect-tabpanel-0 .swiper-slide{display:flex!important;height:auto!important}
-#effect-tabpanel-0 .swiper-wrapper{align-items:stretch}
-.swiper-slide{scale:1!important}
-
-/* ===== 4. Partner-Banner (Anzeigen) ===== */
-.swiper:has(.mui-r5ehh1){overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:20px}
-.swiper:has(.mui-r5ehh1)::-webkit-scrollbar{display:none}
-.swiper:has(.mui-r5ehh1) .swiper-wrapper{transform:none!important;width:max-content;gap:20px}
-.swiper-slide:has(.mui-r5ehh1){flex:none;scroll-snap-align:start;margin-right:0!important;width:calc((min(1310px,100vw - 40px) - 20px)/2)!important}
-.mui-r5ehh1{position:relative;height:auto!important;aspect-ratio:1280/736;border-radius:20px;overflow:hidden;isolation:isolate;background:var(--flz-mint-2)}
-.mui-r5ehh1 img{object-fit:cover}
-.mui-r5ehh1 .mui-ys69f5{background:none}
-.mui-r5ehh1::before{content:"Anzeige";position:absolute;top:14px;left:14px;z-index:2;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.92);color:var(--flz-ink);font-size:12px;font-weight:700;letter-spacing:.04em}
-.mui-r5ehh1 .section{height:auto!important;position:absolute;inset:auto 0 0 0;max-width:none;z-index:1;pointer-events:none;padding:20px}
-.mui-r5ehh1 .mui-m7dd5d{height:auto;justify-content:flex-end}
-.mui-r5ehh1 .markdown a{pointer-events:auto;display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;background:#fff;color:var(--flz-brand)!important;border:0!important;font-weight:700;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-.mui-r5ehh1 .markdown a:hover{background:var(--flz-mint-2)}
-.swiper-slide:has(.mui-r5ehh1) .mui-r5ehh1{width:100%}
-button[id^="gallery_1_"]{z-index:3;width:44px;height:44px;box-shadow:var(--flz-shadow)}
-button[id^="gallery_1_"][disabled]{opacity:.35}
-
-/* ===== 5. Ratgeber-Bereich ===== */
-.mui-72du4l{background:transparent!important;padding:0}
-.mui-72du4l > section{max-width:1310px!important;padding:0 0 24px}
-.mui-72du4l .MuiGrid2-container{display:grid!important;grid-template-columns:1fr 1fr;align-items:stretch;gap:0!important;margin:0!important;width:100%!important;background:#f4f5f9;border-radius:24px;overflow:hidden}
-.mui-72du4l .MuiGrid2-container > .MuiGrid2-root{width:auto!important;max-width:none!important;flex:none!important;padding:0!important;margin:0!important}
-.mui-72du4l .MuiGrid2-direction-xs-row-reverse{direction:rtl}
-.mui-72du4l .MuiGrid2-direction-xs-row-reverse > *{direction:ltr}
-.mui-72du4l .mui-1plliy2{aspect-ratio:1280/736;height:100%;min-height:100%}
-.mui-72du4l .mui-1plliy2 .wrapper{inset:0;position:absolute;height:100%}
-.mui-72du4l .mui-1plliy2 img{object-fit:cover}
-.mui-72du4l .markdown{padding:48px;display:flex;flex-direction:column;justify-content:center;height:100%;box-sizing:border-box}
-.mui-72du4l .markdown h4{font-size:28px;line-height:1.25;margin:0 0 14px}
-.mui-72du4l .markdown br{display:none}
-.mui-72du4l .markdown a{display:inline-flex;align-items:center;min-height:46px;margin-top:20px;padding:0 24px;border-radius:999px;background:var(--flz-brand);color:#fff!important;font-weight:600;text-decoration:none}
-.mui-72du4l .markdown a:hover{background:var(--flz-brand-2)}
-.mui-72du4l .markdown > div:last-child{margin:0}
-.mui-72du4l .mui-l9hf6f{background:var(--flz-brand);border-radius:24px;padding:48px}
-.mui-72du4l .mui-l9hf6f .markdown{padding:0;align-items:flex-start}
-.mui-72du4l .mui-l9hf6f h4,.mui-72du4l .mui-l9hf6f .MuiTypography-body1{color:#fff}
-.mui-72du4l .mui-l9hf6f a{background:#fff;color:var(--flz-brand)!important}
-.mui-72du4l .mui-l9hf6f a:hover{background:var(--flz-mint-2)}
-@media (max-width:900px){
-  .mui-72du4l > section{padding:0 16px 20px}
-  .mui-r5ehh1 .mui-m7dd5d{align-items:flex-start}
-  .mui-r5ehh1 .section{inset:0 0 auto 0;padding:12px;display:flex;justify-content:flex-end}
-  .mui-r5ehh1 .markdown a{min-height:40px;padding:0 16px;font-size:14px}
-  .mui-72du4l .MuiGrid2-container{grid-template-columns:1fr}
-  .mui-72du4l .MuiGrid2-direction-xs-row-reverse{direction:ltr}
-  .mui-72du4l .mui-1plliy2{height:auto}
-  .mui-72du4l .markdown{padding:28px 24px}
-  .mui-72du4l .mui-l9hf6f{padding:32px 24px}
-  .swiper-slide:has(.mui-r5ehh1){width:min(86vw,560px)!important}
-  #carousel-products-container .mui-9jtljk{font-size:22px}
-  #effect-tabpanel-0 .mui-9evbzd{padding:20px}
-}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-
-/* ===== 2b. Top-Produkte: ruhige Karten, Details erst bei Hover/Fokus ===== */
-#categories-carousel-wrapper .carousel-product-item{height:356px!important;border-radius:20px!important;box-shadow:none;border:1px solid var(--flz-line)!important;transition:transform .2s,box-shadow .2s,border-color .2s!important}
-#categories-carousel-wrapper .carousel-product-item:hover,#categories-carousel-wrapper .carousel-product-item:focus-within{border-color:#c9d3dd!important;box-shadow:0 2px 4px rgba(16,24,40,.06),0 16px 32px rgba(16,24,40,.14)}
-#categories-carousel-wrapper .carousel-product-item > a{position:static!important;display:block!important;height:100%}
-#categories-carousel-wrapper .MuiCardActionArea-focusHighlight{display:none}
-/* Bild als Kachel mit Rand statt randloser Banner-Fläche */
-#categories-carousel-wrapper .MuiCardMedia-root{height:256px!important;padding:8px!important;box-sizing:border-box!important}
-#categories-carousel-wrapper .mui-1kk998e{height:100%!important;border-radius:14px;overflow:hidden}
-#categories-carousel-wrapper .mui-1kk998e .wrapper{inset:0;height:100%}
-#categories-carousel-wrapper .mui-1dn9kin{padding-bottom:0!important;height:100%}
-#categories-carousel-wrapper .mui-1jbhj3u{left:16px!important;top:16px!important;gap:6px}
-#categories-carousel-wrapper .mui-1fxzczl{right:14px!important;top:14px!important}
-#categories-carousel-wrapper .MuiChip-root{opacity:0;transform:translateY(-4px);transition:opacity .2s,transform .2s}
-/* Info-Panel: unten verankert, wächst beim Hover nach oben über das Bild */
-#categories-carousel-wrapper .mui-mfn23d{position:absolute!important;left:0;right:0;bottom:0;width:auto!important;display:block!important;background:#fff;padding:12px 16px 16px!important;border-radius:16px 16px 0 0;transition:box-shadow .25s}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-mfn23d,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-mfn23d{box-shadow:0 -10px 24px rgba(16,24,40,.12)}
-#categories-carousel-wrapper .mui-79fy4c{min-height:0!important;font-size:15px!important;line-height:1.3!important;-webkit-line-clamp:2;margin-bottom:6px!important}
-#categories-carousel-wrapper .mui-79fy4c > span{display:none!important;color:var(--flz-muted)}
-#categories-carousel-wrapper .mui-79fy4c br{display:none}
-#categories-carousel-wrapper .mui-1vfuwxo{margin:0!important}
-#categories-carousel-wrapper .mui-1sg6sgd{font-size:18px!important;color:var(--flz-brand)}
-#categories-carousel-wrapper .mui-1sg6sgd .mui-1l6135y,#categories-carousel-wrapper .mui-1sg6sgd .mui-klacwm{font-size:13px;font-weight:400;color:var(--flz-muted)}
-/* Details: im Ruhezustand eingeklappt */
-#categories-carousel-wrapper .mui-vte8eh,#categories-carousel-wrapper .mui-8atqhb,#categories-carousel-wrapper .mui-1vr2anf,#categories-carousel-wrapper .mui-17hskab{max-height:0;opacity:0;overflow:hidden;margin:0!important;padding-top:0!important;padding-bottom:0!important;transition:max-height .25s ease,opacity .2s ease,margin .25s ease}
-#categories-carousel-wrapper .mui-vte8eh > p,#categories-carousel-wrapper .mui-vte8eh > svg{display:none}
-#categories-carousel-wrapper .carousel-product-item:hover .MuiChip-root,#categories-carousel-wrapper .carousel-product-item:focus-within .MuiChip-root{opacity:1;transform:none}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-79fy4c,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-79fy4c{-webkit-line-clamp:3}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-79fy4c > span,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-79fy4c > span{display:block!important;font-size:13px!important;margin-top:2px}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-vte8eh,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-vte8eh{max-height:28px;opacity:1;margin:0 0 4px!important}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-8atqhb,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-8atqhb{max-height:28px;opacity:1;margin:0 0 8px!important}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-17hskab,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-17hskab{max-height:28px;opacity:1}
-#categories-carousel-wrapper .carousel-product-item:hover .mui-1vr2anf,#categories-carousel-wrapper .carousel-product-item:focus-within .mui-1vr2anf{max-height:56px;opacity:1;margin-top:12px!important}
-#categories-carousel-wrapper .mui-1vr2anf .MuiButton-root{min-height:40px;border-radius:999px}
-/* Touch-Geräte: kein Hover -> Preis, THC/CBD und Verfügbarkeit bleiben sichtbar, Karte wächst mit */
-@media (hover:none){
-  #categories-carousel-wrapper .carousel-product-item{height:auto!important}
-  #categories-carousel-wrapper .carousel-product-item > a{display:flex!important;flex-direction:column}
-  #categories-carousel-wrapper .mui-mfn23d{position:static!important;padding-top:4px!important}
-  #categories-carousel-wrapper .mui-8atqhb,#categories-carousel-wrapper .mui-17hskab{max-height:none;opacity:1;margin:0 0 6px!important}
-  #categories-carousel-wrapper .mui-1vfuwxo{gap:8px}
-  #categories-carousel-wrapper .MuiChip-root{opacity:1;transform:none}
-}
-</style>
  </head>
  <body style="padding-top: 0px;">
   <div class="go3670563033" id="hs-web-interactives-top-push-anchor">
@@ -812,27 +615,48 @@ button[id^="gallery_1_"][disabled]{opacity:.35}
    <!-- ====================================================
      NAVIGATION / HEADER (Logo, Suchfeld, Menülinks)
      ==================================================== -->
-   <header class="flz-header">
-   <div class="flz-header__inner">
-    <a class="flz-logo" href="https://flowzz.com/" aria-label="flowzz Startseite"><img src="./flowzz - Der Nr. 1 Preisvergleich_ Cannabis Apotheke &amp; Rezept_files/flowzz-logo-xl.png" alt="flowzz" width="95" height="28"></a>
-    <nav class="flz-nav" aria-label="Hauptnavigation">
-     <a href="https://flowzz.com/strain">Strains</a><a href="https://flowzz.com/product">Cannabisblüten</a><a href="https://flowzz.com/extract">Extrakte</a><a href="https://flowzz.com/edible">Edibles</a><a href="https://flowzz.com/cannabis-auf-rezept">Cannabis Rezept</a><a href="https://flowzz.com/ratgeber">Ratgeber</a>
-     <details class="flz-more"><summary>Mehr</summary><div class="flz-more__panel"><a href="https://flowzz.com/best-buds">Top Ten</a><a href="https://flowzz.com/shop">Shop</a><a href="https://flowzz.com/kontakt">Kontakt</a></div></details>
-    </nav>
-    <div class="flz-search" role="search"><svg aria-hidden="true" viewbox="0 0 24 24">
+   <nav class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed mui-fixed mui-10f7ewh" style="--Paper-shadow: none; transform: none; transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);">
+    <div class="MuiToolbar-root MuiToolbar-regular mui-19zg1s9">
+     <div class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-13lhgq4">
+      <div class="MuiStack-root mui-1motpog">
+       <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways mui-1dbsiqo" href="https://flowzz.com/">
+        <img alt="Flowzz" data-nimg="1" height="28" src="./flowzz - Der Nr. 1 Preisvergleich_ Cannabis Apotheke &amp; Rezept_files/flowzz-logo-xl.png" style="color:transparent" width="95"/>
+       </a>
+       <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways mui-m9si58" href="https://flowzz.com/">
+        <img alt="Flowzz" data-nimg="1" height="24" src="./flowzz - Der Nr. 1 Preisvergleich_ Cannabis Apotheke &amp; Rezept_files/flowzz-logo-xs.png" style="color:transparent" width="81"/>
+       </a>
+       <div class="MuiBox-root mui-12qsga2">
+        <div class="mui-424q0p">
+         <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall mui-vh810p" data-testid="SearchIcon" focusable="false" viewbox="0 0 24 24">
           <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14">
           </path>
-         </svg><input type="search" placeholder="Blüten, Extrakte, Apotheken suchen…" aria-label="Suche nach Blüten, Extrakten, Apotheken oder Herstellern"></div>
-    <div class="flz-actions">
-     <a class="flz-icon-btn" href="https://flowzz.com/rezept-konfigurator" aria-label="Rezeptwunsch"><svg aria-hidden="true" fill="none" viewbox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+         </svg>
+        </div>
+        <div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon mui-qy17pf">
+         <div class="MuiInputBase-root MuiInputBase-colorPrimary mui-10pz4gv">
+          <input aria-autocomplete="list" aria-expanded="false" aria-label="Suche nach Blüten, Extrakten, Apotheken oder Herstellern…" autocapitalize="none" autocomplete="off" class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused mui-aae3xl" id="global-search-desktop" placeholder="Suche nach Blüten, Extrakten, Apotheken oder Herstellern…" role="combobox" spellcheck="false" type="text" value=""/>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="MuiBox-root mui-7v1onr">
+       <a aria-label="Rezeptwunsch" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-abhzj3" href="https://flowzz.com/rezept-konfigurator" tabindex="0">
+        <span class="MuiBadge-root mui-1ymvdey">
+         <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-t0omf" data-testid="PrescriptionFilledIcon" fill="none" focusable="false" viewbox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.3334 10.834C17.3334 11.9833 16.8769 13.0855 16.0642 13.8981C15.2516 14.7108 14.1494 15.1673 13.0001 15.1673C11.8508 15.1673 10.7486 14.7108 9.93595 13.8981C9.12329 13.0855 8.66675 11.9833 8.66675 10.834" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
           </path>
           <path d="M3.36108 6.53516H22.6379" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
           </path>
           <path d="M3.68333 5.92193C3.40205 6.29697 3.25 6.75313 3.25 7.22193V21.666C3.25 22.2406 3.47827 22.7917 3.8846 23.1981C4.29093 23.6044 4.84203 23.8327 5.41667 23.8327H20.5833C21.158 23.8327 21.7091 23.6044 22.1154 23.1981C22.5217 22.7917 22.75 22.2406 22.75 21.666V7.22193C22.75 6.75313 22.5979 6.29697 22.3167 5.92193L20.15 3.03268C19.9482 2.76359 19.6865 2.54518 19.3856 2.39476C19.0848 2.24433 18.753 2.16602 18.4167 2.16602H7.58333C7.24697 2.16602 6.91522 2.24433 6.61437 2.39476C6.31352 2.54518 6.05182 2.76359 5.85 3.03268L3.68333 5.92193Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
           </path>
-         </svg></a>
-     <button class="flz-icon-btn flz-icon-btn--account" type="button" aria-label="Anmelden oder Registrieren"><svg aria-hidden="true" viewbox="0 0 24 24">
+         </svg>
+         <span class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorYellow mui-13nv2vw">
+          0
+         </span>
+        </span>
+       </a>
+       <button aria-label="Anmelden oder Registrieren" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-bym445" tabindex="0" type="button">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-1ivzd8p" data-testid="UserIcon" focusable="false" viewbox="0 0 24 24">
          <g fill="none">
           <path clip-rule="evenodd" d="M12 11.25C14.8995 11.25 17.25 8.89949 17.25 6C17.25 3.10051 14.8995 0.75 12 0.75C9.10051 0.75 6.75 3.10051 6.75 6C6.75 8.89949 9.10051 11.25 12 11.25Z" fill-rule="evenodd" stroke="#28374D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
           </path>
@@ -841,9 +665,73 @@ button[id^="gallery_1_"][disabled]{opacity:.35}
           <line stroke="#28374D" stroke-linecap="round" stroke-width="1.5" x1="2.25" x2="21.75" y1="23.25" y2="23.25">
           </line>
          </g>
-        </svg></button>
-    </div>
-    <details class="flz-burger"><summary class="flz-icon-btn" aria-label="Menü"><svg width="24" height="24" fill="currentColor" aria-hidden="true" viewbox="0 0 24 24">
+        </svg>
+       </button>
+      </div>
+     </div>
+     <div class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-11tfr7z">
+      <div class="MuiStack-root mui-1n7v3q6">
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/strain" target="_self">
+        Strains
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/product" target="_self">
+        Cannabisblüten
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/extract" target="_self">
+        Extrakte
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/edible" target="_self">
+        Edibles
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/cannabis-auf-rezept" target="_self">
+        Cannabis Rezept
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/ratgeber" target="_self">
+        Ratgeber
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/kontakt" target="_self">
+        Kontakt
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/best-buds" target="_self">
+        Top Ten
+       </a>
+       <a class="MuiTypography-root MuiTypography-subtitle2 MuiLink-root MuiLink-underlineAlways mui-j4za0j" href="https://flowzz.com/shop" target="_self">
+        Shop
+       </a>
+      </div>
+      <div class="MuiBox-root mui-q26zi5">
+       <a aria-label="Rezeptwunsch" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-abhzj3" href="https://flowzz.com/rezept-konfigurator" tabindex="0">
+        <span class="MuiBadge-root mui-1ymvdey">
+         <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-t0omf" data-testid="PrescriptionFilledIcon" fill="none" focusable="false" viewbox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.3334 10.834C17.3334 11.9833 16.8769 13.0855 16.0642 13.8981C15.2516 14.7108 14.1494 15.1673 13.0001 15.1673C11.8508 15.1673 10.7486 14.7108 9.93595 13.8981C9.12329 13.0855 8.66675 11.9833 8.66675 10.834" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+          </path>
+          <path d="M3.36108 6.53516H22.6379" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+          </path>
+          <path d="M3.68333 5.92193C3.40205 6.29697 3.25 6.75313 3.25 7.22193V21.666C3.25 22.2406 3.47827 22.7917 3.8846 23.1981C4.29093 23.6044 4.84203 23.8327 5.41667 23.8327H20.5833C21.158 23.8327 21.7091 23.6044 22.1154 23.1981C22.5217 22.7917 22.75 22.2406 22.75 21.666V7.22193C22.75 6.75313 22.5979 6.29697 22.3167 5.92193L20.15 3.03268C19.9482 2.76359 19.6865 2.54518 19.3856 2.39476C19.0848 2.24433 18.753 2.16602 18.4167 2.16602H7.58333C7.24697 2.16602 6.91522 2.24433 6.61437 2.39476C6.31352 2.54518 6.05182 2.76359 5.85 3.03268L3.68333 5.92193Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+          </path>
+         </svg>
+         <span class="MuiBadge-badge MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorYellow mui-13nv2vw">
+          0
+         </span>
+        </span>
+       </a>
+       <button aria-label="Anmelden oder Registrieren" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-bym445" tabindex="0" type="button">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-1ivzd8p" data-testid="UserIcon" focusable="false" viewbox="0 0 24 24">
+         <g fill="none">
+          <path clip-rule="evenodd" d="M12 11.25C14.8995 11.25 17.25 8.89949 17.25 6C17.25 3.10051 14.8995 0.75 12 0.75C9.10051 0.75 6.75 3.10051 6.75 6C6.75 8.89949 9.10051 11.25 12 11.25Z" fill-rule="evenodd" stroke="#28374D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+          </path>
+          <path d="M2.25 23.25C2.25 17.8652 6.61522 13.5 12 13.5C17.3848 13.5 21.75 17.8652 21.75 23.25" stroke="#28374D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+          </path>
+          <line stroke="#28374D" stroke-linecap="round" stroke-width="1.5" x1="2.25" x2="21.75" y1="23.25" y2="23.25">
+          </line>
+         </g>
+        </svg>
+       </button>
+      </div>
+     </div>
+     <div class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters mui-u8nqmw">
+      <button aria-label="Menu" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium mui-1h1659i" tabindex="0" type="button">
+       <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-q7mezt" data-testid="MenuIcon" focusable="false" viewbox="0 0 24 24">
         <g>
          <path d="M0 6C0 5.44772 0.447266 5 1 5H23C23.5527 5 24 5.44772 24 6C24 6.55228 23.5527 7 23 7H1C0.447266 7 0 6.55228 0 6Z">
          </path>
@@ -852,9 +740,24 @@ button[id^="gallery_1_"][disabled]{opacity:.35}
          <path d="M1 17C0.447266 17 0 17.4477 0 18C0 18.5523 0.447266 19 1 19H23C23.5527 19 24 18.5523 24 18C24 17.4477 23.5527 17 23 17H1Z">
          </path>
         </g>
-       </svg></summary><div class="flz-burger__panel"><a href="https://flowzz.com/strain">Strains</a><a href="https://flowzz.com/product">Cannabisblüten</a><a href="https://flowzz.com/extract">Extrakte</a><a href="https://flowzz.com/edible">Edibles</a><a href="https://flowzz.com/cannabis-auf-rezept">Cannabis Rezept</a><a href="https://flowzz.com/ratgeber">Ratgeber</a><a href="https://flowzz.com/best-buds">Top Ten</a><a href="https://flowzz.com/shop">Shop</a><a href="https://flowzz.com/kontakt">Kontakt</a></div></details>
-   </div>
-  </header>
+       </svg>
+      </button>
+      <div class="MuiBox-root mui-10hvz4m">
+       <div class="mui-424q0p">
+        <svg aria-hidden="true" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall mui-vh810p" data-testid="SearchIcon" focusable="false" viewbox="0 0 24 24">
+         <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14">
+         </path>
+        </svg>
+       </div>
+       <div class="MuiAutocomplete-root MuiAutocomplete-hasPopupIcon mui-qy17pf">
+        <div class="MuiInputBase-root MuiInputBase-colorPrimary mui-10pz4gv">
+         <input aria-autocomplete="list" aria-expanded="false" aria-label="Suche nach Blüten, Extrakten, Apotheken oder Herstellern…" autocapitalize="none" autocomplete="off" class="MuiInputBase-input MuiAutocomplete-input MuiAutocomplete-inputFocused mui-aae3xl" id="global-search-mobile" placeholder="Suche nach Blüten, Extrakten, Apotheken oder Herstellern…" role="combobox" spellcheck="false" type="text" value=""/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </nav>
    <div class="mui-m43pro">
    </div>
    <div class="MuiBox-root mui-2u1lp9">
@@ -8181,8 +8084,67 @@ button[id^="gallery_1_"][disabled]{opacity:.35}
      KATEGORIE-TABS (Preiswerte Blüten, Ratgeber, Extrakte, etc.)
      ==================================================== -->
      <section class="MuiContainer-root MuiContainer-maxWidthLg MuiContainer-disableGutters section-C12 mui-1jm7h6e">
-      <nav class="flz-quick" aria-label="Schnellzugriff"><span class="flz-quick__label">Schnellzugriff</span><a href="https://flowzz.com/product">Preiswerte Cannabisblüten</a><a href="https://flowzz.com/cannabis-auf-rezept">Cannabis Rezept</a><a href="https://flowzz.com/extract">Preiswerte Extrakte</a><a href="https://flowzz.com/strain">Strains nach Effekt*</a><a href="https://flowzz.com/strain">Strains nach potenzieller medizinischer Wirkung*</a></nav>
-      <div id="effect-tabpanel-0">
+      <div class="MuiTabs-root mui-1tfef">
+       <div class="MuiTabs-scrollableX MuiTabs-hideScrollbar mui-i8yde5" style="width:99px;height:99px;position:absolute;top:-9999px;overflow:scroll">
+       </div>
+       <div class="MuiTabs-scroller MuiTabs-hideScrollbar MuiTabs-scrollableX mui-jb8z7h" style="margin-bottom: 0px;">
+        <div aria-label="Strain by effect" class="MuiTabs-list MuiTabs-flexContainer mui-162tvoi" role="tablist">
+         <button aria-selected="true" class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected mui-qctj97" role="tab" tabindex="0" type="button">
+          <div class="MuiStack-root mui-1ha8oyz">
+           <div class="MuiTypography-root MuiTypography-body1 mui-eeb73t">
+            Preiswerte
+           </div>
+           <div class="MuiTypography-root MuiTypography-h6 mui-1n59vqw">
+            Cannabisblüten
+           </div>
+          </div>
+         </button>
+         <button aria-selected="false" class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary mui-qctj97" role="tab" tabindex="-1" type="button">
+          <div class="MuiStack-root mui-1ha8oyz">
+           <div class="MuiTypography-root MuiTypography-body1 mui-eeb73t">
+            Ratgeber
+           </div>
+           <div class="MuiTypography-root MuiTypography-h6 mui-1n59vqw">
+            Cannabis Rezept
+           </div>
+          </div>
+         </button>
+         <button aria-selected="false" class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary mui-qctj97" role="tab" tabindex="-1" type="button">
+          <div class="MuiStack-root mui-1ha8oyz">
+           <div class="MuiTypography-root MuiTypography-body1 mui-eeb73t">
+            Preiswerte
+           </div>
+           <div class="MuiTypography-root MuiTypography-h6 mui-1n59vqw">
+            Extrakte
+           </div>
+          </div>
+         </button>
+         <button aria-selected="false" class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary mui-qctj97" role="tab" tabindex="-1" type="button">
+          <div class="MuiStack-root mui-1ha8oyz">
+           <div class="MuiTypography-root MuiTypography-body1 mui-eeb73t">
+            Strains nach
+           </div>
+           <div class="MuiTypography-root MuiTypography-h6 mui-1n59vqw">
+            Effekt*
+           </div>
+          </div>
+         </button>
+         <button aria-selected="false" class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary mui-qctj97" role="tab" tabindex="-1" type="button">
+          <div class="MuiStack-root mui-1ha8oyz">
+           <div class="MuiTypography-root MuiTypography-body1 mui-eeb73t">
+            Strains nach potenzieller
+           </div>
+           <div class="MuiTypography-root MuiTypography-h6 mui-1n59vqw">
+            medizinischer Wirkung*
+           </div>
+          </div>
+         </button>
+        </div>
+        <span class="MuiTabs-indicator mui-vca20k" style="left: 0px; width: 186.234px;">
+        </span>
+       </div>
+      </div>
+      <div aria-labelledby="effect-tab-0" id="effect-tabpanel-0" role="tabpanel">
        <div class="MuiBox-root mui-9evbzd">
         <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-6 mui-16a0prx">
          <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 mui-iln954">
@@ -13094,45 +13056,111 @@ Neuerscheinungen
    @keyframes CookiebotWidgetFadeIn{0%{opacity:0}to{opacity:1}}#CookiebotWidget{word-wrap:break-word;left:10px;bottom:10px;animation:CookiebotWidgetFadeIn .3s ease-in;background-color:#141414;border-radius:40px;box-shadow:0 4px 16px rgba(0,0,0,.15);font-family:Helvetica,Arial,sans-serif;line-height:1.5;min-height:48px;min-width:48px;opacity:0;pointer-events:none;position:fixed;transition:all .2s ease-in;word-break:break-word;z-index:2147483631}#CookiebotWidget,#CookiebotWidget *{background:transparent;box-sizing:border-box;color:#FFFFFF;font-size:15px;letter-spacing:.1px;margin:0;outline:0;padding:0}#CookiebotWidget *{font-family:inherit}#CookiebotWidget button,#CookiebotWidget li,#CookiebotWidget strong,#CookiebotWidget svg,#CookiebotWidget ul{border:none;cursor:inherit;font-weight:inherit;line-height:1.5}#CookiebotWidget:not(.CookiebotWidget-inactive){opacity:1;pointer-events:all;transition:opacity .3s ease-in,border-radius .2s ease-in}#CookiebotWidget.CookiebotWidget-open{overflow:hidden}#CookiebotWidget:not(.CookiebotWidget-open):hover{box-shadow:0 4px 18px rgba(0,0,0,.3)}#CookiebotWidget+#CookiebotWidgetUnderlay{background:#000;height:100vh;left:0;opacity:0;pointer-events:none;position:fixed;top:0;visibility:hidden;width:100vw;z-index:2147483630}#CookiebotWidget:not(.CookiebotWidget-open) .CookiebotWidget-logo{cursor:pointer}#CookiebotWidget .CookiebotWidget-logo{display:block;transition:opacity .3s,transform .3s}#CookiebotWidget .CookiebotWidget-logo svg{display:block;height:44px;transition:all .3s;width:44px}#CookiebotWidget:not(.CookiebotWidget-open) button.CookiebotWidget-logo svg{height:48px;transition:all 0s ease;transition-delay:.2s;width:48px}#CookiebotWidget .CookiebotWidget-logo svg circle{fill:#141414}#CookiebotWidget .CookiebotWidget-logo svg path{fill:#FFFFFF}#CookiebotWidget #CookiebotWidget-widgetContent{display:flex;max-height:0;max-width:0;overflow:hidden;transition:all .2s ease-in}#CookiebotWidget.CookiebotWidget-open #CookiebotWidget-widgetContent{max-height:1000px;max-width:1000px}#CookiebotWidget.CookiebotWidget-open .CookiebotWidget-contents{max-height:calc(100vh - 10px);min-height:360px}#CookiebotWidget :focus-visible,#CookiebotWidget:not(.CookiebotWidget-open) .Cookiebotwidget-logo{outline:2px solid #1032CF;outline-offset:1px}@media screen and (max-width:600px){#CookiebotWidget:not(.CookiebotWidget-inactive){bottom:10px;left:10px}}@media screen and (min-width:601px){#CookiebotWidget+#CookiebotWidgetUnderlay{display:none}}
   </style>
   <script id="interactive-features">
-document.addEventListener('DOMContentLoaded', function () {
-  // Pfeile steuern native Scroll-Container (Top-Produkte, Teaser, Banner)
-  function wire(scroller, prev, next) {
-    if (!scroller) return;
-    var step = function () { return Math.max(240, scroller.clientWidth * 0.8); };
-    function update() {
-      var max = scroller.scrollWidth - scroller.clientWidth - 2;
-      prev.forEach(function (b) { b.disabled = scroller.scrollLeft <= 2; });
-      next.forEach(function (b) { b.disabled = scroller.scrollLeft >= max; });
+   document.addEventListener('DOMContentLoaded', function () {
+  // --- CAROUSEL BUTTONS (Top Produkte) ---
+  const carousels = document.querySelectorAll('.infinite-carousel');
+  carousels.forEach(function (carousel) {
+    const parentSection = carousel.closest('section') || carousel.parentElement;
+    if (!parentSection) return;
+
+    const prevBtns = parentSection.querySelectorAll('button[aria-label="Vorheriges Produkt"], button[aria-label="previous"]');
+    const nextBtns = parentSection.querySelectorAll('button[aria-label="Nächstes Produkt"], button[aria-label="next"]');
+
+    prevBtns.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        carousel.scrollBy({ left: -285, behavior: 'smooth' });
+      });
+    });
+
+    nextBtns.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        carousel.scrollBy({ left: 285, behavior: 'smooth' });
+      });
+    });
+  });
+
+  // --- SWIPER CAROUSELS ---
+  const swipers = document.querySelectorAll('.swiper');
+  swipers.forEach(function (swiper) {
+    const wrapper = swiper.querySelector('.swiper-wrapper');
+    if (!wrapper) return;
+    const slides = wrapper.querySelectorAll('.swiper-slide');
+    if (!slides.length) return;
+
+    const parentSection = swiper.closest('section') || swiper.parentElement;
+    let currentIndex = 0;
+    const slideWidth = slides[0].offsetWidth || 300;
+    const maxIndex = Math.max(0, slides.length - Math.floor(swiper.offsetWidth / slideWidth));
+
+    function updateSlide() {
+      const offset = -(currentIndex * (slideWidth + 16));
+      wrapper.style.transform = 'translate3d(' + offset + 'px, 0px, 0px)';
     }
-    prev.forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); scroller.scrollBy({ left: -step(), behavior: 'smooth' }); }); });
-    next.forEach(function (b) { b.addEventListener('click', function (e) { e.preventDefault(); scroller.scrollBy({ left: step(), behavior: 'smooth' }); }); });
-    scroller.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-  }
-  var products = document.querySelector('#categories-carousel-wrapper');
-  var pSection = document.querySelector('#carousel-products-container');
-  if (products && pSection) {
-    wire(products, [].slice.call(pSection.querySelectorAll('button[aria-label="Vorheriges Produkt"]')), [].slice.call(pSection.querySelectorAll('button[aria-label="Nächstes Produkt"]')));
-  }
-  document.querySelectorAll('.swiper').forEach(function (sw) {
-    var scope = sw.closest('section') || sw.parentElement;
-    var prev = scope.querySelector('button[aria-label="previous"]');
-    var next = scope.querySelector('button[aria-label="next"]');
-    if (prev && next) wire(sw, [prev], [next]);
+
+    if (parentSection) {
+      const nextBtn = parentSection.querySelector('button[aria-label="next"], button.swiper-button-next');
+      const prevBtn = parentSection.querySelector('button[aria-label="previous"], button.swiper-button-prev');
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (currentIndex < maxIndex) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateSlide();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          if (currentIndex > 0) {
+            currentIndex--;
+          } else {
+            currentIndex = maxIndex;
+          }
+          updateSlide();
+        });
+      }
+    }
   });
-  // Leere Typ-Chips ("-") ausblenden
-  document.querySelectorAll('.carousel-product-item .MuiChip-label').forEach(function (l) {
-    if (l.textContent.trim() === '-') l.closest('.MuiChip-root').style.setProperty('display', 'none', 'important');
-  });
-  // Menüs schließen bei Klick außerhalb / Escape
-  document.addEventListener('click', function (e) {
-    document.querySelectorAll('.flz-more[open], .flz-burger[open]').forEach(function (d) { if (!d.contains(e.target)) d.removeAttribute('open'); });
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') document.querySelectorAll('.flz-more[open], .flz-burger[open]').forEach(function (d) { d.removeAttribute('open'); });
+
+  // --- TAB SWITCHING (e.g. Preiswerte Cannabisblüten, Ratgeber, etc.) ---
+  const tabContainers = document.querySelectorAll('.MuiTabs-root');
+  tabContainers.forEach(function (tabContainer) {
+    const tabs = tabContainer.querySelectorAll('.MuiTab-root');
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function (e) {
+        e.preventDefault();
+        // Update tab selected styles
+        tabs.forEach(function (t) {
+          t.classList.remove('Mui-selected');
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+        tab.classList.add('Mui-selected');
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+
+        // Show matching panel
+        const panels = document.querySelectorAll('[id^="effect-tabpanel-"]');
+        panels.forEach(function (panel, pIndex) {
+          if (pIndex === index) {
+            panel.hidden = false;
+            panel.style.display = 'block';
+          } else {
+            panel.hidden = true;
+            panel.style.display = 'none';
+          }
+        });
+      });
+    });
   });
 });
-</script>
+  </script>
  </body>
 </html>
