@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://consentcdn.cookiebot.com/sdk/bc-v4.min.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><script>(function(){var n="CookieConsentBulkSetting-";this.handleRequest=function(t){function f(n){t.source.postMessage(n,t.origin)}var i,e,o,r,u;try{if(i=t.data,e=typeof i=="string",e&&(i=JSON.parse(i)),o=i.value&&i.value.expireMonths&&i.value.expireMonths===0,!i.serial||o){f("bcEmpty");return}r=n+i.serial;switch(i.action){case"get":u=JSON.parse(localStorage.getItem(r));u?f(u):f("bcEmpty");break;case"set":localStorage.setItem(r,JSON.stringify(i.value));break;case"remove":localStorage.removeItem(r)}}catch(s){}};window.addEventListener("message",this.handleRequest,!1)})()</script><div class="recjump-widget-container" style="position: fixed; right: 16px; bottom: 64px; z-index: 100555550; display: none;"><template shadowrootmode="open">
+    
+<style>
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.recjump-widget {
+    width: 450px;
+    background: #0C0E12;
+    color: #F7F7F7;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInScale 0.25s ease forwards;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.recjump-line {
+    border-bottom: 1px solid #61656C;
+    width: 482px;
+    margin-left: -16px;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.recjump-widget.hide {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.recjump-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recjump-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.recjump-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.recjump-close {
+    background: none;
+    border: none;
+    color: #CECFD2;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+.recjump-close:hover { color: #fff; }
+
+.recjump-body { margin-bottom: 12px; }
+
+.recjump-body h2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.recjump-body p {
+    color: #CECFD2;
+    margin-bottom: 16px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.recjump-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #CECFD2;
+}
+
+.recjump-option-wrapper {
+    border-radius: 8px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+/* .recjump-option-wrapper:hover { background:rgba(16, 19, 23, 0.78); } */
+
+.recjump-option-text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 8px;
+}
+
+.recjump-option-text { 
+    color: #CECFD2;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.checkmark-indicator {
+    display: none;
+    color: #fff;
+    background: #6941C6;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    margin-right: 4px;
+    flex-shrink: 0;
+}
+.checkmark-indicator.show { display: flex; }
+
+.recjump-vote-controls {
+    display: none;
+    align-items: center;
+    flex-shrink: 0;
+}
+// .recjump-vote-controls input[type="checkbox"] {
+//     accent-color: #6941C6;
+//     transform: scale(1.1);
+//     cursor: pointer;
+// }
+.recjump-vote-controls input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #61656C;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.recjump-vote-controls input[type="checkbox"]:hover {
+    border-color: #A39ACF;
+}
+
+.recjump-vote-controls input[type="checkbox"]:checked {
+    background-color: #6941C6;
+    border-color: #6941C6;
+}
+
+.recjump-vote-controls input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    top: 1px;
+}
+
+.recjump-result-details {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    padding-top: 4px;
+}
+.recjump-progress {
+    background: #61656C;
+    height: 6px;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+}
+.recjump-progress-bar {
+    background: #6941C6;
+    height: 100%;
+    border-radius: 25px;
+    transition: width 0.4s ease;
+}
+.recjump-votes {
+    font-size: 12px;
+    color: #85888E;
+    text-align: right;
+}
+
+.recjump-comment {
+    margin-top: 8px;
+    position: relative;
+}
+.recjump-comment textarea {
+    width: 100%;
+    min-height: 50px;
+    max-height: 105px;
+    resize: none;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    scrollbar-gutter: stable both-edges;
+    background: #0C0E12;
+    color: #fff;
+    border: 1px solid #61656C;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    outline: none;
+    transition: height 0.1s ease;
+}
+
+.recjump-comment textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+.recjump-comment textarea::-webkit-scrollbar-thumb {
+    background-color: #61656C;
+    border-radius: 3px;
+}
+
+.recjump-comment textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #8B8E94;
+}
+
+.recjump-comment textarea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.recjump-comment textarea:focus { border-color: #a970ff; }
+
+.recjump-counter {
+    position: absolute;
+    right: 14px;
+    bottom: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #85888E;
+}
+
+.red { color: #ff5555; }
+
+.recjump-footer { margin-top: 16px; }
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.recjump-footer button {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #61656C;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.recjump-cancel {
+    background: #0C0E12;
+    color: #ccc;
+}
+.recjump-cancel:hover { background: #3c3c41; }
+
+.recjump-vote {
+    background: #6941C6;
+    color: #fff;
+}
+.recjump-vote:hover:not(:disabled) { background: #8e58e3; }
+.recjump-vote:disabled {
+    background: #373A41;
+    color: #85888E;
+    cursor: not-allowed;
+}
+
+.recjump-footer-close {
+    width: 100%;
+    display: none;
+}
+
+.center { text-align: center; }
+
+/* --- Mode-specific --- */
+.recjump-widget.vote-mode .recjump-vote-controls { display: flex; }
+.recjump-widget.vote-mode .recjump-result-details { display: none; }
+
+.recjump-widget.result-mode .recjump-option-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    cursor: default;
+}
+.recjump-widget.result-mode .recjump-vote-controls { display: none; }
+.recjump-widget.result-mode .recjump-result-details { display: flex; }
+</style>
+
+    <div class="recjump-widget vote-mode">
+            <div class="recjump-header">
+                <div class="icon-container">
+                    <img src="chrome-extension://ajloakkohlpbobanidjnlakdbiggebjg/icons/icon_128.png" alt="RecJump" class="recjump-icon">
+                    <span class="recjump-title">RecJump</span>
+                </div>
+                <button class="recjump-close" id="closeBtn">&#10005;</button>
+            </div>
+            <div class="recjump-line"></div>
+
+            <div class="recjump-body">
+                <h2>Would you like to vote for the new feature?</h2>
+                <p>You can help shape the next version of RecJump!</p>
+                <div class="recjump-options">
+                    
+        <div class="recjump-option-wrapper" data-option="0">
+            <div class="recjump-vote-controls mode-vote">
+                <input type="checkbox" data-option="0">
+            </div>
+
+            <div class="recjump-option-text-wrapper">
+                <div class="recjump-option-text">Pause recording</div>
+                <span class="checkmark-indicator">&#10004;</span>                
+            </div>
+
+            <div class="recjump-result-details mode-result">
+                <div class="recjump-progress">
+                    <div class="recjump-progress-bar" style="width: 32%;"></div>
+                </div>
+                <div class="recjump-votes">106 votes</div>
+            </div>
+        </div>
+    
+        <div class="recjump-option-wrapper" data-option="1">
+            <div class="recjump-vote-controls mode-vote">
+                <input type="checkbox" data-option="1">
+            </div>
+
+            <div class="recjump-option-text-wrapper">
+                <div class="recjump-option-text">On-screen controls (pause, stop, timer)</div>
+                <span class="checkmark-indicator">&#10004;</span>                
+            </div>
+
+            <div class="recjump-result-details mode-result">
+                <div class="recjump-progress">
+                    <div class="recjump-progress-bar" style="width: 32%;"></div>
+                </div>
+                <div class="recjump-votes">106 votes</div>
+            </div>
+        </div>
+    
+        <div class="recjump-option-wrapper" data-option="2">
+            <div class="recjump-vote-controls mode-vote">
+                <input type="checkbox" data-option="2">
+            </div>
+
+            <div class="recjump-option-text-wrapper">
+                <div class="recjump-option-text">Countdown before start</div>
+                <span class="checkmark-indicator">&#10004;</span>                
+            </div>
+
+            <div class="recjump-result-details mode-result">
+                <div class="recjump-progress">
+                    <div class="recjump-progress-bar" style="width: 23%;"></div>
+                </div>
+                <div class="recjump-votes">77 votes</div>
+            </div>
+        </div>
+    
+        <div class="recjump-option-wrapper" data-option="3">
+            <div class="recjump-vote-controls mode-vote">
+                <input type="checkbox" data-option="3">
+            </div>
+
+            <div class="recjump-option-text-wrapper">
+                <div class="recjump-option-text">Share your idea or feedback</div>
+                <span class="checkmark-indicator">&#10004;</span>                
+            </div>
+
+            <div class="recjump-result-details mode-result">
+                <div class="recjump-progress">
+                    <div class="recjump-progress-bar" style="width: 12%;"></div>
+                </div>
+                <div class="recjump-votes">41 votes</div>
+            </div>
+        </div>
+    
+                </div>
+                <div class="recjump-comment">
+                    <textarea id="commentArea" maxlength="300" placeholder="Your comment..." data-option="3"></textarea>
+                    <div class="recjump-counter"><span id="charCounter">0/300</span></div>
+                </div>
+            </div>
+
+
+            <div class="recjump-footer">
+                <div class="btn-container">
+                    <button class="recjump-cancel" id="cancelBtn">Cancel</button>
+                    <button class="recjump-vote" id="voteBtn" disabled="">Vote</button>
+                </div>
+                <button class="recjump-vote recjump-footer-close" id="closeFooterBtn">Close</button>
+            </div>
+        </div>
+    </template></div></body></html>
